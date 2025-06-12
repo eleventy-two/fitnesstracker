@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fitness Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f3f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .tracker {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px 30px;
+      width: 320px;
+      text-align: center;
+    }
+
+    .tracker h2 {
+      margin-bottom: 20px;
+    }
+
+    .stat {
+      margin: 15px 0;
+      font-size: 1.2em;
+    }
+
+    .bar-container {
+      width: 100%;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 5px;
+    }
+
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #4CAF50, #81C784);
+      transition: width 0.5s;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tracker">
+    <h2>Fitness Tracker</h2>
+    <div class="stat">Steps: <strong>0</strong></div>
+    <div class="bar-container"><div class="bar" style="width: 0%;"></div></div>
+
+    <div class="stat">Calories Burned: <strong>0</strong> kcal</div>
+    <div class="bar-container"><div class="bar" style="width: 0%;"></div></div>
+
+    <div class="stat">Active Minutes: <strong>0</strong> min</div>
+    <div class="bar-container"><div class="bar" style="width: 0%;"></div></div>
+
+    <div class="error">⚠️ Failed to sync with device</div>
+  </div>
+</body>
+</html>
